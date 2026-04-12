@@ -16,7 +16,6 @@ const NavbarComponent = () => {
     <nav className="bg-white text-gray-900 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
-        {/* LEFT - Logo */}
         <Link
           to="/"
           className="text-2xl font-bold text-red-500 tracking-tight"
@@ -24,7 +23,6 @@ const NavbarComponent = () => {
           Indonesia
         </Link>
 
-        {/* CENTER - Menu */}
         <div className="hidden md:flex gap-8">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path;
@@ -49,7 +47,6 @@ const NavbarComponent = () => {
           })}
         </div>
 
-        {/* RIGHT - Explore Button */}
         <div className="hidden md:block">
           <Link
             to="/provinsi"
@@ -59,7 +56,6 @@ const NavbarComponent = () => {
           </Link>
         </div>
 
-        {/* MOBILE BUTTON */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-2xl text-gray-700"
@@ -67,7 +63,6 @@ const NavbarComponent = () => {
         </button>
       </div>
 
-      {/* MOBILE MENU */}
       {isOpen && (
         <div className="md:hidden bg-white px-6 py-4 space-y-4 border-t border-gray-200">
           {navItems.map((item) => {
@@ -89,7 +84,6 @@ const NavbarComponent = () => {
             );
           })}
 
-          {/* Mobile Explore */}
           <Link
             to="/provinsi"
             onClick={() => setIsOpen(false)}

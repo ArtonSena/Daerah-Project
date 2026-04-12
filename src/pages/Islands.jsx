@@ -14,7 +14,6 @@ const Islands = () => {
   return (
     <div className="min-h-screen bg-white text-gray-900 px-6 py-10">
       <div className="max-w-7xl mx-auto">
-        {/* Title */}
         <h1 className="text-4xl font-semibold mb-4 text-center tracking-tight  text-gray-900">
           Pulau Indonesia
         </h1>
@@ -24,7 +23,6 @@ const Islands = () => {
           tampilan interaktif.
         </p>
 
-        {/* Search */}
         <div className="mb-10 max-w-md mx-auto">
           <input
             type="text"
@@ -35,7 +33,6 @@ const Islands = () => {
           />
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
           {filteredIslands.map((island) => (
             <Link
@@ -43,25 +40,21 @@ const Islands = () => {
               to={`/pulau/${island.id}`}
               className="group p-5 bg-white border border-gray-200 rounded-xl transition-all duration-300 hover:border-red-500 hover:shadow-md hover:-translate-y-1"
             >
-              {/* Title */}
               <h2 className="text-lg font-semibold text-gray-800 group-hover:text-black">
                 {island.name}
               </h2>
 
-              {/* Description */}
               <p className="text-sm text-gray-500 mt-2 line-clamp-3">
                 {island.description}
               </p>
 
-              {/* Info */}
               <div className="mt-4 text-xs text-gray-400 space-y-1">
                 <p>{island.area}</p>
                 <p>{island.population}</p>
                 <p>{island.provinces.length} Provinsi</p>
               </div>
 
-              {/* CTA */}
-              {/* CTA */}
+              
               <button className="mt-4 px-4 py-2 text-sm font-medium text-red-500 border border-red-500 rounded-lg transition-all duration-300 hover:bg-red-500 hover:text-white">
                 Jelajahi →
               </button>
@@ -69,7 +62,7 @@ const Islands = () => {
           ))}
         </div>
 
-        {/* Empty state */}
+        
         {filteredIslands.length === 0 && (
           <div className="text-center py-12">
             <h3 className="text-xl font-semibold text-gray-500 mb-2">

@@ -12,10 +12,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-gray-950 flex flex-col text-white">
-        {/* Navbar */}
         <NavbarComponent />
 
-        {/* Content */}
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -26,8 +24,6 @@ function App() {
             <Route path="/pulau/:id" element={<Island />} />
           </Routes>
         </main>
-
-        {/* Footer */}
         <FooterComponent />
       </div>
     </BrowserRouter>

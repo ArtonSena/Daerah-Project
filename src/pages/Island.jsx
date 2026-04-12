@@ -31,7 +31,6 @@ const Island = () => {
     <div className="min-h-screen bg-white text-gray-900 px-6 py-10">
       <div className="max-w-6xl mx-auto">
 
-        {/* HEADER */}
         <div className="mb-10">
           <Link
             to="/pulau"
@@ -49,7 +48,7 @@ const Island = () => {
           </p>
         </div>
 
-        {/* STATS */}
+       
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           <div className="p-5 border border-gray-200 rounded-xl text-center hover:border-red-500 transition">
             <p className="font-semibold">{island.area}</p>
@@ -72,7 +71,6 @@ const Island = () => {
           </div>
         </div>
 
-        {/* WISATA */}
         <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6 text-black">Tempat Wisata</h2>
 
@@ -92,7 +90,7 @@ const Island = () => {
           </div>
         </div>
 
-        {/* BUDAYA */}
+       
         <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6 text-black">Budaya & Tradisi</h2>
 
@@ -127,7 +125,7 @@ const Island = () => {
           </div>
         </div>
 
-        {/* EKONOMI */}
+        
         <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6 text-black">Aktivitas Ekonomi</h2>
 
@@ -155,7 +153,7 @@ const Island = () => {
           </div>
         </div>
 
-        {/* GEOGRAFI */}
+        
         <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6 text-red-500">Geografi</h2>
 
@@ -177,7 +175,7 @@ const Island = () => {
           </div>
         </div>
 
-        {/* PROVINSI */}
+       
         <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6 text-red-500">
             Provinsi di {island.name}
@@ -195,7 +193,7 @@ const Island = () => {
           </div>
         </div>
 
-        {/* BAHASA */}
+     
         <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6 text-red-500">Bahasa</h2>
 
@@ -211,7 +209,7 @@ const Island = () => {
           </div>
         </div>
 
-        {/* NAV */}
+      
         <div className="flex gap-4">
           <Link
             to="/pulau"

@@ -47,7 +47,7 @@ const Provinsi = () => {
           Daftar Provinsi
         </h1>
 
-        {/* Search */}
+      
         <div className="mb-10 max-w-md mx-auto">
           <input
             type="text"
@@ -58,7 +58,7 @@ const Provinsi = () => {
           />
         </div>
 
-        {/* Grid */}
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {filteredProvinsi.map((prov) => (
             <Link

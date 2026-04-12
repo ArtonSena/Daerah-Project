@@ -5,7 +5,6 @@ const Home = () => {
     <div className="min-h-screen bg-white text-black">
       <div className="px-6 py-20 max-w-7xl mx-auto">
 
-        {/* HERO */}
         <div className="max-w-5xl">
           <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6  text-black">
             Temukan Data Wilayah <br />
@@ -18,7 +17,6 @@ const Home = () => {
             dipakai untuk kebutuhan kamu.
           </p>
 
-          {/* CTA */}
           <div className="flex flex-wrap gap-4">
             <Link
               to="/provinsi"
@@ -36,10 +34,8 @@ const Home = () => {
           </div>
         </div>
 
-        {/* DIVIDER */}
         <div className="mt-16 h-[2px] w-20 bg-red-500"></div>
 
-        {/* STATS */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6">
 
           <div className="group border border-gray-200 rounded-xl p-6 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
@@ -72,7 +68,6 @@ const Home = () => {
 
         </div>
 
-        {/* EXTRA SECTION */}
         <div className="mt-20 grid md:grid-cols-2 gap-10 items-center">
 
           <div>
