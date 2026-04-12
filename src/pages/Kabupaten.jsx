@@ -15,7 +15,7 @@ const Kabupaten = () => {
       try {
         // ambil nama provinsi
         const provRes = await fetch(
-          "https://alamat.thecloudalert.com/api/provinsi/get/"
+          "https://alamat.thecloudalert.com/api/provinsi/get/",
         );
         const provData = await provRes.json();
 
@@ -24,7 +24,7 @@ const Kabupaten = () => {
 
         // ambil kabupaten
         const kabRes = await fetch(
-          `https://alamat.thecloudalert.com/api/kabkota/get/?d_provinsi_id=${id}`
+          `https://alamat.thecloudalert.com/api/kabkota/get/?d_provinsi_id=${id}`,
         );
         const kabData = await kabRes.json();
 
@@ -59,10 +59,9 @@ const Kabupaten = () => {
   return (
     <div className="min-h-screen bg-white text-gray-900 px-6 py-10">
       <div className="max-w-6xl mx-auto">
-
         <Link
           to="/provinsi"
-          className="text-sm text-gray-500 hover:text-gray-900 mb-6 inline-block transition"
+          className="text-sm bg-red-500 text-white hover:bg-red-600 px-3 py-2 rounded"
         >
           ← Kembali ke Provinsi
         </Link>
@@ -71,20 +70,16 @@ const Kabupaten = () => {
           Kabupaten di {provinsiName}
         </h1>
 
-       
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {kabupaten.map((kab) => (
             <div
               key={kab.id}
               className="p-5 bg-white border border-gray-200 rounded-xl hover:border-gray-900 transition-all duration-300 hover:shadow-md"
             >
-              <h2 className="text-sm font-medium text-gray-800">
-                {kab.text}
-              </h2>
+              <h2 className="text-sm font-medium text-gray-800">{kab.text}</h2>
             </div>
           ))}
         </div>
-
       </div>
     </div>
   );

@@ -57,33 +57,6 @@ const Home = () => {
             </p>
           </div>
         </div>
-
-        
-        <div className="flex justify-start">
-          <div className="p-10 border border-gray-200 rounded-2xl max-w-xl bg-white shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-           
-            <h3 className="text-2xl font-semibold mb-3 tracking-tight">
-              Mulai Eksplorasi
-            </h3>
-
-           
-            <p className="text-gray-500 mb-8 text-sm leading-relaxed">
-              Jelajahi data wilayah Indonesia dengan tampilan yang sederhana dan
-              mudah dipahami.
-            </p>
-
-            
-            <Link
-              to="/provinsi"
-              className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-red-500 border border-red-500 rounded-lg hover:bg-red-500 hover:text-white transition-all duration-300"
-            >
-              Jelajahi Sekarang
-              <span className="transition-transform group-hover:translate-x-1">
-                →
-              </span>
-            </Link>
-          </div>
-        </div>
       </div>
     </div>
   );

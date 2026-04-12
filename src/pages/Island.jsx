@@ -5,7 +5,6 @@ const Island = () => {
   const { id } = useParams();
   const island = islands.find((i) => i.id === id);
 
-  // ❌ NOT FOUND
   if (!island) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center p-8">
@@ -30,25 +29,18 @@ const Island = () => {
   return (
     <div className="min-h-screen bg-white text-gray-900 px-6 py-10">
       <div className="max-w-6xl mx-auto">
-
         <div className="mb-10">
-          <Link
-            to="/pulau"
-            className="text-sm text-gray-500 hover:text-red-500"
-          >
-            ← Kembali ke Pulau
-          </Link>
-
-          <h1 className="text-4xl font-semibold mt-4 mb-3 tracking-tight text-red-400">
+          <h1 className="text-4xl font-semibold mt-4 mb-3 tracking-tight text-red-400 text-center">
             {island.name}
           </h1>
 
-          <p className="text-gray-500 max-w-2xl leading-relaxed">
-            Informasi singkat mengenai karakteristik, wilayah, dan potensi dari {island.name}.
+          <p className="text-gray-500 max-w-2xl mx-auto text-center leading-relaxed">
+            {" "}
+            Informasi singkat mengenai karakteristik, wilayah, dan potensi dari{" "}
+            {island.name}.
           </p>
         </div>
 
-       
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           <div className="p-5 border border-gray-200 rounded-xl text-center hover:border-red-500 transition">
             <p className="font-semibold">{island.area}</p>
@@ -72,7 +64,9 @@ const Island = () => {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-6 text-black">Tempat Wisata</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-black">
+            Tempat Wisata
+          </h2>
 
           <div className="grid md:grid-cols-3 gap-5">
             {island.touristAttractions.map((item, i) => (
@@ -82,78 +76,91 @@ const Island = () => {
               >
                 <h3 className="font-semibold text-sm">{item.name}</h3>
                 <p className="text-xs text-red-500 mb-2">{item.location}</p>
-                <p className="text-sm text-gray-500">
-                  {item.description}
-                </p>
+                <p className="text-sm text-gray-500">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
 
-       
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-6 text-black">Budaya & Tradisi</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-black">
+            Budaya & Tradisi
+          </h2>
 
           <div className="grid md:grid-cols-2 gap-5">
             <div className="p-5 border border-gray-200 rounded-xl">
               <h3 className="font-semibold mb-3">Tarian</h3>
               {island.culture.traditionalDance.map((item, i) => (
-                <p key={i} className="text-sm text-gray-500">• {item}</p>
+                <p key={i} className="text-sm text-gray-500">
+                  • {item}
+                </p>
               ))}
             </div>
 
             <div className="p-5 border border-gray-200 rounded-xl">
               <h3 className="font-semibold mb-3">Musik</h3>
               {island.culture.traditionalMusic.map((item, i) => (
-                <p key={i} className="text-sm text-gray-500">• {item}</p>
+                <p key={i} className="text-sm text-gray-500">
+                  • {item}
+                </p>
               ))}
             </div>
 
             <div className="p-5 border border-gray-200 rounded-xl">
               <h3 className="font-semibold mb-3">Festival</h3>
               {island.culture.festivals.map((item, i) => (
-                <p key={i} className="text-sm text-gray-500">• {item}</p>
+                <p key={i} className="text-sm text-gray-500">
+                  • {item}
+                </p>
               ))}
             </div>
 
             <div className="p-5 border border-gray-200 rounded-xl">
               <h3 className="font-semibold mb-3">Kuliner</h3>
               {island.culture.cuisine.map((item, i) => (
-                <p key={i} className="text-sm text-gray-500">• {item}</p>
+                <p key={i} className="text-sm text-gray-500">
+                  • {item}
+                </p>
               ))}
             </div>
           </div>
         </div>
 
-        
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-6 text-black">Aktivitas Ekonomi</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-black">
+            Aktivitas Ekonomi
+          </h2>
 
           <div className="grid md:grid-cols-3 gap-5">
             <div className="p-5 border border-gray-200 rounded-xl">
               <h3 className="font-semibold mb-3">Industri</h3>
               {island.economy.mainIndustries.map((item, i) => (
-                <p key={i} className="text-sm text-gray-500">• {item}</p>
+                <p key={i} className="text-sm text-gray-500">
+                  • {item}
+                </p>
               ))}
             </div>
 
             <div className="p-5 border border-gray-200 rounded-xl">
               <h3 className="font-semibold mb-3">Pertanian</h3>
               {island.economy.agriculture.map((item, i) => (
-                <p key={i} className="text-sm text-gray-500">• {item}</p>
+                <p key={i} className="text-sm text-gray-500">
+                  • {item}
+                </p>
               ))}
             </div>
 
             <div className="p-5 border border-gray-200 rounded-xl">
               <h3 className="font-semibold mb-3">Produk</h3>
               {island.economy.famousProducts.map((item, i) => (
-                <p key={i} className="text-sm text-gray-500">• {item}</p>
+                <p key={i} className="text-sm text-gray-500">
+                  • {item}
+                </p>
               ))}
             </div>
           </div>
         </div>
 
-        
         <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6 text-red-500">Geografi</h2>
 
@@ -175,7 +182,6 @@ const Island = () => {
           </div>
         </div>
 
-       
         <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6 text-red-500">
             Provinsi di {island.name}
@@ -193,7 +199,6 @@ const Island = () => {
           </div>
         </div>
 
-     
         <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6 text-red-500">Bahasa</h2>
 
@@ -209,7 +214,6 @@ const Island = () => {
           </div>
         </div>
 
-      
         <div className="flex gap-4">
           <Link
             to="/pulau"
@@ -217,15 +221,7 @@ const Island = () => {
           >
             Kembali
           </Link>
-
-          <Link
-            to="/provinsi"
-            className="px-6 py-2 text-sm bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
-          >
-            Lihat Provinsi
-          </Link>
         </div>
-
       </div>
     </div>
   );
